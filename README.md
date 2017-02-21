@@ -7,5 +7,5 @@ This repository includes a sample rspec test for logstash filter. Test is execut
 To run sample test,
 
 ```bash
-$ ./run.sh
+$ ./start-containers.sh
 ```
