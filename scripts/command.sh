@@ -7,9 +7,10 @@
 set -e
 
 export PATH="/opt/logstash/vendor/jruby/bin/:$PATH"
+cd /opt/logstash
 
-echo "----> Test filter syntax"
-time /opt/logstash/bin/logstash -t -f /test/conf/filter.conf
+# echo "----> Test filter syntax"
+# time /opt/logstash/bin/logstash -t -f /test/conf/filter.conf
 
 echo "----> Run rspec of filtering"
-/opt/logstash/vendor/bundle/jruby/1.9/bin/rspec /test/spec/filter_spec.rb
+bundle exec rspec /test/spec/filter_spec.rb
